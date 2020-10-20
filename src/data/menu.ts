@@ -394,7 +394,7 @@ export const menu: BentoCompany[] = [
         active: true,
       },
       {
-        id: 5,
+        id: 6,
         name: '無骨腿排蒜泥白肉雙拚',
         price: 120,
         active: true,
