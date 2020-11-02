@@ -338,7 +338,7 @@ export const menu: BentoCompany[] = [
         active: true,
       },
       {
-        id: 3,
+        id: 4,
         name: '咕咾酥肉',
         price: 130,
         active: true,
