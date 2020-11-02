@@ -4,8 +4,8 @@ interface MenuDate {
 }
 
 export const menuDate: MenuDate = {
-  from: '2020/10/19',
-  to: '2020/10/23',
+  from: '2020/11/02',
+  to: '2020/11/06',
 }
 
 export interface Bento {
@@ -34,37 +34,37 @@ export const menu: BentoCompany[] = [
         id: 1,
         name: '柚香蔥麻雞',
         price: 120,
-        active: false,
+        active: true,
       },
       {
         id: 2,
         name: '味增腐乳雞',
         price: 120,
-        active: true,
+        active: false,
       },
       {
         id: 3,
         name: '紐奧良烤豬',
         price: 120,
-        active: true,
+        active: false,
       },
       {
         id: 4,
         name: '家傳醬味嫩雞(無飯)',
         price: 120,
-        active: true,
+        active: false,
       },
       {
         id: 5,
         name: '義式烤雞',
         price: 120,
-        active: false,
+        active: true,
       },
       {
         id: 6,
         name: 'BBQ烤豬',
         price: 120,
-        active: false,
+        active: true,
       },
       {
         id: 7,
@@ -99,6 +99,12 @@ export const menu: BentoCompany[] = [
       {
         id: 12,
         name: '蕃茄羅勒鷄',
+        price: 120,
+        active: false,
+      },
+      {
+        id: 13,
+        name: '藥膳嫩雞餐(無飯)',
         price: 120,
         active: true,
       },
@@ -150,7 +156,7 @@ export const menu: BentoCompany[] = [
         id: 2,
         name: '星馬沙爹嫩雞胸',
         price: 120,
-        active: false,
+        active: true,
       },
       {
         id: 3,
@@ -162,7 +168,7 @@ export const menu: BentoCompany[] = [
         id: 4,
         name: '黑胡椒豬里肌',
         price: 120,
-        active: true,
+        active: false,
       },
       {
         id: 5,
@@ -174,7 +180,7 @@ export const menu: BentoCompany[] = [
         id: 6,
         name: '蜂蜜芥末嫩雞胸',
         price: 120,
-        active: true,
+        active: false,
       },
       {
         id: 7,
@@ -186,11 +192,11 @@ export const menu: BentoCompany[] = [
         id: 8,
         name: '日式薑汁豬里肌',
         price: 120,
-        active: false,
+        active: true,
       },
       {
         id: 9,
-        name: '式酸辣豬里肌',
+        name: '泰式酸辣豬里肌',
         price: 120,
         active: true,
       },
@@ -317,7 +323,7 @@ export const menu: BentoCompany[] = [
         id: 1,
         name: '紅燒獅孑頭',
         price: 130,
-        active: true,
+        active: false,
       },
       {
         id: 2,
@@ -328,6 +334,12 @@ export const menu: BentoCompany[] = [
       {
         id: 3,
         name: '宮保雞丁',
+        price: 130,
+        active: true,
+      },
+      {
+        id: 3,
+        name: '咕咾酥肉',
         price: 130,
         active: true,
       },
@@ -379,13 +391,13 @@ export const menu: BentoCompany[] = [
         id: 3,
         name: '義式烤鷄腿排',
         price: 120,
-        active: true,
+        active: false,
       },
       {
         id: 4,
         name: '葱爆牛肉',
         price: 120,
-        active: false,
+        active: true,
       },
       {
         id: 5,
@@ -459,13 +471,13 @@ export const menu: BentoCompany[] = [
         id: 4,
         name: '薑燒低脂豬肉片',
         price: 120,
-        active: false,
+        active: true,
       },
       {
         id: 5,
         name: '活菌香草里肌餐',
         price: 120,
-        active: true,
+        active: false,
       },
     ],
   },
