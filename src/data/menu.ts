@@ -1069,7 +1069,7 @@ export const menu: BentoCompany[] = [
   },
   {
     id: 19,
-    name: '紅豆小館',
+    name: '(臺前花車)紅豆小館',
     active: true,
     date: [
       '2020/11/02',
