@@ -4,8 +4,8 @@ interface MenuDate {
 }
 
 export const menuDate: MenuDate = {
-  from: '2020/11/02',
-  to: '2020/11/06',
+  from: '2020/11/09',
+  to: '2020/11/13',
 }
 
 export interface Bento {
