@@ -431,7 +431,7 @@ export const menu: BentoCompany[] = [
       },
       {
         id: 8,
-        name: '梅花叉燒蔥爆牛雙拼'，
+        name: '梅花叉燒蔥爆牛雙拼',
         price: 120,
         active: true,
       },
