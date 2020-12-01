@@ -178,7 +178,7 @@ export const menu: BentoCompany[] = [
       },
       {
         id: 4,
-        name: '照燒雞腿排餐',
+        name: '照燒嫩雞餐(無飯)',
         price: 120,
         active: true,
       }
