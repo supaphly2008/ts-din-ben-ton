@@ -893,7 +893,7 @@ export const menu: BentoCompany[] = [
   },
   {
     id: 21,
-    name: '食晴誠食',
+    name: '(臺前花車)食晴誠食',
     active: true,
     date: ['2020/12/21'],
     bento: [
