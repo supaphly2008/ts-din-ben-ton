@@ -1,12 +1,12 @@
 import React from 'react'
-import styled from '@emotion/styled'
+// import styled from '@emotion/styled'
 import { Text, Card, Button } from 'rebass'
 import { User } from '../data/user'
 
-const Icon = styled.i`
-  color: green;
-  margin-left: 5px;
-`
+// const Icon = styled.i`
+//   color: green;
+//   margin-left: 5px;
+// `
 
 interface NameListProps {
   user: User | null
@@ -16,7 +16,7 @@ interface NameListProps {
 }
 
 const NamesList = (props: NameListProps): JSX.Element => {
-  const { user, setUser, users, orders } = props
+  const { user, setUser, users } = props
   return (
     <Card
       mx={2}
