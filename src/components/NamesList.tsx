@@ -50,7 +50,7 @@ const NamesList = (props: NameListProps): JSX.Element => {
             m={1}
           >
             {users[key].name}
-            {orders[key] && <Icon className="fas fa-check" />}
+            {/* {orders[key] && <Icon className="fas fa-check" />} */}
           </Button>
         ))}
     </Card>
