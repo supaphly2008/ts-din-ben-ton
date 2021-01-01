@@ -1,12 +1,12 @@
 import React from 'react'
-// import styled from '@emotion/styled'
+import styled from '@emotion/styled'
 import { Text, Card, Button } from 'rebass'
 import { User } from '../data/user'
 
-// const Icon = styled.i`
-//   color: green;
-//   margin-left: 5px;
-// `
+const Icon = styled.i`
+  color: green;
+  margin-left: 5px;
+`
 
 interface NameListProps {
   user: User | null
@@ -16,7 +16,15 @@ interface NameListProps {
 }
 
 const NamesList = (props: NameListProps): JSX.Element => {
-  const { user, setUser, users } = props
+  const { user, setUser, users, orders } = props
+
+  const isEmptyOrder = (orders: any | undefined) => {
+    return (
+      !orders ||
+      (Object.keys(orders).length === 0 && orders.constructor === Object)
+    )
+  }
+
   return (
     <Card
       mx={2}
@@ -50,7 +58,9 @@ const NamesList = (props: NameListProps): JSX.Element => {
             m={1}
           >
             {users[key].name}
-            {/* {orders[key] && <Icon className="fas fa-check" />} */}
+            {!isEmptyOrder(orders) && orders[key] && (
+              <Icon className="fas fa-check" />
+            )}
           </Button>
         ))}
     </Card>
