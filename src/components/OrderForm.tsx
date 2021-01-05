@@ -4,7 +4,7 @@ import { Button, Card, Text } from 'rebass'
 import { Bento } from '../data/menu'
 import { User } from '../data/user'
 import { todayForFirebase } from '../utils'
-import axios from 'axios'
+// import axios from 'axios'
 import Toast from '../Toast'
 
 export interface OrderFormProps {
