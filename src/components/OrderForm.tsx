@@ -46,12 +46,51 @@ const OrderForm = (props: OrderFormProps): JSX.Element | null => {
       bento: selectedBento,
     }
 
+    
+
+    const saveOrders = Object.keys(users).map((targetUser: string) => {
+      const emptyOrder = {
+        id: users[targetUser].id,
+        company: null,
+        userName: users[targetUser].name,
+        bento: null,
+      }
+      
+
+      if (user.id === targetUser) {  
+        return {
+          user: user.name,
+          order
+        }
+
+      }
+
+      if (orders && orders[targetUser] && orders[targetUser].bento) {
+        return {
+          user: targetUser,
+          order: orders[targetUser]
+        }
+      }
+
+      // 預設沒點餐的自動跳過
+      return {
+        user: targetUser,
+        order: emptyOrder
+      }
+    }).reduce((pre, cur) => {
+      return {
+        ...pre,
+        [cur.user]: cur.order
+      }
+    }, {})
+    
+
     // save to db
     // create collection based on yyyyMMdd
     database
       .collection('orders')
       .doc(todayForFirebase)
-      .set({ [user.id]: order }, { merge: true })
+      .set(saveOrders, { merge: true })
       .then(() => {
         let alertMessage = ''
         if (order.company && order.bento) {
@@ -64,7 +103,7 @@ const OrderForm = (props: OrderFormProps): JSX.Element | null => {
       .catch((e) => console.log(e))
 
     if (haveAllMemberOrdered(user.id)) {
-      sendTodSlack()
+      // sendTodSlack()
     }
   }
 
@@ -83,61 +122,61 @@ const OrderForm = (props: OrderFormProps): JSX.Element | null => {
     return orderCount === Object.keys(users).length ? true : false
   }
 
-  const formatOrderMsg = () => {
-    let ordersMsg2 = Object.keys(orders)
-      .filter((key) => key !== user.id)
-      .map((key) => {
-        return orders[key].bento
-          ? `${orders[key].userName} ${orders[key].company}-${orders[key].bento.name} X 1`
-          : `${orders[key].userName} 今天跳過`
-      })
+  // const formatOrderMsg = () => {
+  //   let ordersMsg2 = Object.keys(orders)
+  //     .filter((key) => key !== user.id)
+  //     .map((key) => {
+  //       return orders[key].bento
+  //         ? `${orders[key].userName} ${orders[key].company}-${orders[key].bento.name} X 1`
+  //         : `${orders[key].userName} 今天跳過`
+  //     })
 
-    if (!company && !selectedBento) {
-      ordersMsg2.push(`${user.name} 今天跳過`)
-    } else {
-      ordersMsg2.push(`${user.name} ${company}-${selectedBento?.name} X 1`)
-    }
+  //   if (!company && !selectedBento) {
+  //     ordersMsg2.push(`${user.name} 今天跳過`)
+  //   } else {
+  //     ordersMsg2.push(`${user.name} ${company}-${selectedBento?.name} X 1`)
+  //   }
 
-    return '```' + ordersMsg2.sort().join('\n') + '```'
-  }
+  //   return '```' + ordersMsg2.sort().join('\n') + '```'
+  // }
 
-  const sendTodSlack = () => {
-    const slackMsg = JSON.stringify({
-      text: 'Everyone finish order !',
-      blocks: [
-        {
-          type: 'section',
-          text: {
-            type: 'mrkdwn',
-            text:
-              '<@UUFDEF42K> <@UNCL0UC84> <@U0183UHBBE1>\n🚀 Everyone finish order !',
-          },
-        },
-        {
-          type: 'section',
-          text: {
-            type: 'mrkdwn',
-            text: formatOrderMsg(),
-          },
-        },
-      ],
-    })
-    return axios
-      .post(
-        'https://asia-northeast1-isentropic-tape-250207.cloudfunctions.net/din-ben-ton',
-        JSON.stringify({
-          text: slackMsg,
-        }),
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        },
-      )
-      .then((res) => {
-        console.log(res)
-      })
-  }
+  // const sendTodSlack = () => {
+  //   const slackMsg = JSON.stringify({
+  //     text: 'Everyone finish order !',
+  //     blocks: [
+  //       {
+  //         type: 'section',
+  //         text: {
+  //           type: 'mrkdwn',
+  //           text:
+  //             '<@UUFDEF42K> <@UNCL0UC84> <@U0183UHBBE1>\n🚀 Everyone finish order !',
+  //         },
+  //       },
+  //       {
+  //         type: 'section',
+  //         text: {
+  //           type: 'mrkdwn',
+  //           text: formatOrderMsg(),
+  //         },
+  //       },
+  //     ],
+  //   })
+  //   return axios
+  //     .post(
+  //       'https://asia-northeast1-isentropic-tape-250207.cloudfunctions.net/din-ben-ton',
+  //       JSON.stringify({
+  //         text: slackMsg,
+  //       }),
+  //       {
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //       },
+  //     )
+  //     .then((res) => {
+  //       console.log(res)
+  //     })
+  // }
 
   return (
     <Card
