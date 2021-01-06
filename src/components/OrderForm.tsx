@@ -56,10 +56,10 @@ const OrderForm = (props: OrderFormProps): JSX.Element | null => {
         bento: null,
       }
       
-
+      
       if (user.id === targetUser) {  
         return {
-          user: user.name,
+          user: user.id,
           order
         }
 
