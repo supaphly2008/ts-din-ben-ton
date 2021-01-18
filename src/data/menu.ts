@@ -888,7 +888,7 @@ export const menu: BentoCompany[] = [
         id: 2,
         name: '香滷棒棒腿餐',
         price: 140,
-        active: false,
+        active: true,
         date: ['2021/01/18'],
       },
       {
