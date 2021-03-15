@@ -565,9 +565,9 @@ export const menu: BentoCompany[] = [
     bento: [
       {
         id: 1,
-        name: '雞腿肉烏龍麵',
+        name: '黃悶雞腿肉烏龍麵',
         price: 100,
-        active: false,
+        active: true,
       },
       {
         id: 2,
