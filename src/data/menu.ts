@@ -636,14 +636,14 @@ export const menu: BentoCompany[] = [
     id: 14,
     name: '(臺前花車)了凡',
     active: true,
-    date: ['2021/03/31'],
+    date: ['2021/04/08'],
     bento: [
       {
         id: 1,
         name: '叉燒燒肉便當',
         price: 140,
         active: true,
-        date: ['2021/03/31'],
+        date: ['2021/04/08'],
       },
       {
         id: 2,
@@ -657,21 +657,21 @@ export const menu: BentoCompany[] = [
         name: '油雞便當',
         price: 130,
         active: true,
-        date: ['2021/03/31'],
+        date: ['2021/04/08'],
       },
       {
         id: 4,
         name: '叉燒便當',
         price: 130,
         active: true,
-        date: ['2021/03/31'],
+        date: ['2021/04/08'],
       },
       {
         id: 5,
         name: '蔥油雞便當',
         price: 130,
         active: true,
-        date: ['2021/03/31'],
+        date: ['2021/04/08'],
       },
     ],
   },
@@ -680,10 +680,9 @@ export const menu: BentoCompany[] = [
     name: '(臺前花車)紅豆食府',
     active: true,
     date: [
-      '2021/03/29',
-      '2021/03/30',
-      '2021/03/31',
-      '2021/04/01'
+      '2021/04/07',
+      '2021/04/08',
+      '2021/04/09'
     ],
     bento: [
       {
@@ -691,14 +690,14 @@ export const menu: BentoCompany[] = [
         name: '宮保雞丁',
         price: 130,
         active: true,
-        date: ['2021/03/30'],
+        date: ['2021/04/08'],
       },
       {
         id: 2,
         name: '紅燒獅子頭',
         price: 130,
         active: true,
-        date: ['2021/03/29', '2021/03/31', '2021/04/01'],
+        date: ['2021/04/07', '2021/04/09'],
       },
       {
         id: 3,
@@ -733,35 +732,35 @@ export const menu: BentoCompany[] = [
         name: '東坡肉',
         price: 150,
         active: true,
-        date: ['2021/03/29', '2021/04/01'],
+        date: ['2021/04/07'],
       },
       {
         id: 8,
         name: '無錫排骨',
         price: 150,
         active: true,
-        date: ['2021/03/31'],
+        date: ['2021/04/09'],
       },
       {
         id: 9,
         name: '富貴牛腩煲',
         price: 150,
         active: true,
-        date: ['2021/03/30'],
+        date: ['2021/04/08'],
       },
       {
         id: 10,
         name: '椒麻香酥雞',
         price: 130,
         active: true,
-        date: ['2021/03/29', '2021/03/31', '2021/04/01'],
+        date: ['2021/04/07', '2021/04/09'],
       },
       {
         id: 11,
         name: '蔥油鮮魚',
         price: 130,
         active: true,
-        date: ['2021/03/30'],
+        date: ['2021/04/08'],
       },
     ],
   },
@@ -805,28 +804,28 @@ export const menu: BentoCompany[] = [
     id: 17,
     name: '(臺前花車)周董',
     active: true,
-    date: ['2021/03/30'],
+    date: ['2021/04/07'],
     bento: [
       {
         id: 1,
         name: '炭烤大雞腿',
         price: 120,
         active: true,
-        date: ['2021/03/30'],
+        date: ['2021/04/07'],
       },
       {
         id: 2,
         name: '炭烤大雞排',
         price: 120,
         active: true,
-        date: ['2021/03/30'],
+        date: ['2021/04/07'],
       },
       {
         id: 3,
         name: '炭烤牛五花',
         price: 120,
         active: true,
-        date: ['2021/03/30'],
+        date: ['2021/04/07'],
       },
       {
         id: 4,
@@ -840,7 +839,7 @@ export const menu: BentoCompany[] = [
         name: '燒烤松阪豬',
         price: 120,
         active: true,
-        date: ['2021/03/19'],
+        date: ['2021/04/07'],
       },
     ],
   },
@@ -849,10 +848,9 @@ export const menu: BentoCompany[] = [
     name: '(臺前花車)紅豆小館',
     active: true,
     date: [
-      '2021/03/29',
-      '2021/03/30',
-      '2021/03/31',
-      '2021/04/01'
+      '2021/04/07',
+      '2021/04/08',
+      '2021/04/09'
     ],
     bento: [
       {
@@ -860,7 +858,7 @@ export const menu: BentoCompany[] = [
         name: '回鍋肉',
         price: 130,
         active: true,
-        date: ['2021/03/30', '2021/04/01'],
+        date: ['2021/04/08'],
       },
       {
         id: 2,
@@ -868,10 +866,9 @@ export const menu: BentoCompany[] = [
         price: 130,
         active: true,
         date: [
-          '2021/03/29',
-          '2021/03/30',
-          '2021/03/31',
-          '2021/04/01'
+          '2021/04/07',
+          '2021/04/08',
+          '2021/04/09'
         ],
       },
       {
@@ -879,28 +876,28 @@ export const menu: BentoCompany[] = [
         name: '水煮嫩肉',
         price: 150,
         active: true,
-        date: ['2021/03/29', '2021/04/01'],
+        date: ['2021/04/07'],
       },
       {
         id: 4,
         name: '豆酥鮮魚',
         price: 130,
         active: true,
-        date: ['2021/03/29', '2021/03/31'],
+        date: ['2021/04/07', '2021/04/09'],
       },
       {
         id: 5,
         name: '香辣口水雞',
         price: 150,
         active: true,
-        date: ['2021/03/29'],
+        date: ['2021/04/08'],
       },
       {
         id: 6,
         name: '蒜泥白肉',
         price: 150,
         active: true,
-        date: ['2021/03/31'],
+        date: ['2021/04/09'],
       },
     ],
   },
@@ -908,7 +905,7 @@ export const menu: BentoCompany[] = [
     id: 21,
     name: '(臺前花車)食晴誠食',
     active: true,
-    date: ['2021/03/29', '2021/04/01'],
+    date: ['2021/04/09'],
     bento: [
       {
         id: 1,
@@ -951,6 +948,27 @@ export const menu: BentoCompany[] = [
         price: 120,
         active: true,
         date: ['2021/04/01'],
+      },
+      {
+        id: 7,
+        name: '泰式紅咖哩雞飯',
+        price: 120,
+        active: true,
+        date: ['2021/04/09'],
+      },
+      {
+        id: 8,
+        name: '打拋豬花雕雞飯',
+        price: 120,
+        active: true,
+        date: ['2021/04/09'],
+      },
+      {
+        id: 9,
+        name: '豬排炒飯',
+        price: 120,
+        active: true,
+        date: ['2021/04/09'],
       },
     ],
   },
